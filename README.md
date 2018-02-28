@@ -1,7 +1,7 @@
 # rPi-xmrig-gcc7.3.0
 ## The fastest miner available for Raspbian on Raspberry Pi.
 
-This miner is a compilation of https://github.com/xmrig/xmrig version 2.4.5, compiled with gcc/g++ 7.3.0 specifically for Raspbian Jessie on Raspberry Pi3 b (untested on earlier models - but please feel free to try and post your findings). As noted in the Ubuntu build instructions on the official xmrig repo: "Optionally you can use gcc 7 to small performance increase" (https://github.com/xmrig/xmrig/wiki/Ubuntu-Build). Additionally, a recent change _might_ take further advantage of 7.3.0 over 7.1.0, seen discussed here: https://github.com/xmrig/xmrig/pull/385
+This miner is a compilation of https://github.com/xmrig/xmrig version 2.4.5, compiled with gcc/g++ 7.3.0 specifically for Raspbian Jessie on Raspberry Pi3 b (untested on earlier models - but please feel free to try and post your findings). As noted in the Ubuntu build instructions on the official xmrig repo: "Optionally you can use gcc 7 to small performance increase" (https://github.com/xmrig/xmrig/wiki/Ubuntu-Build). Additionally, a recent change _might_ take further advantage of 7.3.0 over 7.1.0, seen discussed here: https://github.com/xmrig/xmrig/pull/385. **TL;DR - use this binary for a 15%-20% performance boost on Raspbian.**
 
 ## So what?
 
@@ -31,4 +31,6 @@ I have not altered, or reduced the default xmrig donations in my compilations, a
 
 ## Performance notes/known issues
 * Max hashrate stat seems to get stuck shortly after starting - no actual impact
-* I _definitely_ see better performance (~10%) when the display goes blank. Not sure why, since I seem to get the same behavior whether i boot to desktop or CLI (happens with 6.1.0 gcc too- not specific to this build. Just an rPi oddity i've noticed).
+* I find --av=3 gives best results
+* I suggest using a proxy like xmrig-proxy if you plan to cluster some pi's for mining: https://github.com/xmrig/xmrig-proxy
+* I _definitely_ see better performance (~10%) when the display goes blank/to sleep. Not sure why, since I seem to get the same behavior whether I boot to desktop or CLI (happens with 6.1.0 gcc too- not specific to this build. Just an rPi oddity i've noticed).

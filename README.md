@@ -26,8 +26,8 @@ I have not altered, or reduced the default xmrig donations in my compilations, a
 * aeon: WmsqiMAQtMHCLs1XzCm7bL6aAALG7GBaGW2CfPF6X9L7hoNZQK3dMsvTMFooCncshGCG2JC6nhFeAcmR1197MKGU2Dojden7k
 
 ## Credits
-Official xmrig repo: https://github.com/xmrig/xmrig
-Guide that helped me in compiling gcc on Raspberry Pi: https://solarianprogrammer.com/2017/12/07/raspberry-pi-raspbian-compiling-gcc/
+* Official xmrig repo: https://github.com/xmrig/xmrig
+* Guide that helped me in compiling gcc on Raspberry Pi: https://solarianprogrammer.com/2017/12/07/raspberry-pi-raspbian-compiling-gcc/
 
 ## Performance notes/known issues
 * Max hashrate stat seems to get stuck shortly after starting - no actual impact

@@ -1,7 +1,7 @@
 # rPi-xmrig-gcc7.3.0
 ## The fastest miner available for Raspbian on Raspberry Pi.
 
-This miner is a compilation of https://github.com/xmrig/xmrig, compiled with gcc/g++ 7.3.0 specifically for Raspbian Jessie on Raspberry Pi3 b (untested on earlier models - but please feel free to try and post your findings). As noted in the Ubuntu build instructions on the official xmrig repo: "Optionally you can use gcc 7 to small performance increase" (https://github.com/xmrig/xmrig/wiki/Ubuntu-Build). Additionally, a recent change _might_ take further advantage of 7.3.0 over 7.1.0, seen discussed here: https://github.com/xmrig/xmrig/pull/385
+This miner is a compilation of https://github.com/xmrig/xmrig version 2.4.5, compiled with gcc/g++ 7.3.0 specifically for Raspbian Jessie on Raspberry Pi3 b (untested on earlier models - but please feel free to try and post your findings). As noted in the Ubuntu build instructions on the official xmrig repo: "Optionally you can use gcc 7 to small performance increase" (https://github.com/xmrig/xmrig/wiki/Ubuntu-Build). Additionally, a recent change _might_ take further advantage of 7.3.0 over 7.1.0, seen discussed here: https://github.com/xmrig/xmrig/pull/385
 
 ## So what?
 
@@ -11,7 +11,7 @@ The latest version of gcc/g++ available from Raspbian repositories is 6.1.0, and
 
 ## Results
 
-I now see an approximate 20% hashrate increase with my new xmrig binary! I tested the binary on two other rPi3b's I have and saw the same performance boost. My pi's have heatsinks, fans and mild overclocks (cpu_freq=1325, sdram_freq=500). With the gcc 6.1.0 xmrig binary, I average ~21.8 H/s. With the new 7.3.0 xmrig binary, I'm averaging ~25.1 H/s!
+I now see an approximate 20% hashrate increase with my new xmrig binary! I tested the binary on two other rPi3b's I have and saw the same performance boost. My pi's have heatsinks, fans and mild overclocks (cpu_freq=1325, sdram_freq=500). Mining *Aeon* with the gcc 6.1.0 xmrig binary, I average ~21.8 H/s. With the new 7.3.0 xmrig binary, I'm averaging ~25.1 H/s!
 
 ![hashrate gcc-7.3.0](https://i.imgur.com/84csjI4.png)
 

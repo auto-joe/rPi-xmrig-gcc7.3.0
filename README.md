@@ -1,7 +1,34 @@
 # rPi-xmrig-gcc7.3.0
-## The fastest miner available for Raspbian.
+## The fastest miner available for Raspbian on Raspberry Pi.
 
-This miner is a compilation of https://github.com/xmrig/xmrig, compiled with gcc/g++ 7.3.0 specifically for Raspbian Jessie on Raspberry Pi3 b (untested on earlier models - but please feel free to try and post your findings). As noted in the Ubuntu build instructions on the official xmrig repo: "Optionally you can use gcc 7 to small performance increase" (https://github.com/xmrig/xmrig/wiki/Ubuntu-Build). Additionally, a recent change may take further advantage of 7.3.0 over 7.1.0, discussed here: https://github.com/xmrig/xmrig/pull/385
+This miner is a compilation of https://github.com/xmrig/xmrig, compiled with gcc/g++ 7.3.0 specifically for Raspbian Jessie on Raspberry Pi3 b (untested on earlier models - but please feel free to try and post your findings). As noted in the Ubuntu build instructions on the official xmrig repo: "Optionally you can use gcc 7 to small performance increase" (https://github.com/xmrig/xmrig/wiki/Ubuntu-Build). Additionally, a recent change _might_ take further advantage of 7.3.0 over 7.1.0, seen discussed here: https://github.com/xmrig/xmrig/pull/385
 
+## So what?
+
+The latest version of gcc/g++ available from Raspbian repositories is 6.1.0, and you will be hard-pressed to find a third party binary for 7+ at the moment. To solve this, I compiled 7.3.0 from source, directly on one of my rPi3's (long process- saving you time here!). Then, after making a slight tweak to the flags.cmake file from the original xmrig repo, I was able to successfully compile xmrig 2.4.5 with gcc-7.3.0:
 
 ![init gcc-7.3.0](https://i.imgur.com/CV3gvNU.png)
+
+## Results
+
+I now see an approximate 20% hashrate increase with my new xmrig binary! I tested the binary on two other rPi3b's I have and saw the same performance boost. My pi's have heatsinks, fans and mild overclocks (cpu_freq=1325, sdram_freq=500). With the gcc 6.1.0 xmrig binary, I average ~21.8 H/s. With the new 7.3.0 xmrig binary, I'm averaging ~25.1 H/s!
+
+![hashrate gcc-7.3.0](https://i.imgur.com/84csjI4.png)
+
+## Warning
+
+I DO NOT RECOMMEND that anyone ever download binaries/executables from third party sources or unofficial Github repos. You can review my credits section to see my sources, and really just take me at my word from there. Hopefully some brave users will try it out and report back here to vouch for me :)
+
+## Donations
+
+I have not altered, or reduced the default xmrig donations in my compilations, as I respect the work that the developers have put in, I'm merely standing (crouching?) on their shoulders. However, if you feel like giving me a small donation for my time spent and sharing this binary and my findings, please feel free to donate to either of my wallets:
+* xmr: 4BrL51JCc9NGQ71kWhnYoDRffsDZy7m1HUU7MRU4nUMXAHNFBEJhkTZV9HdaL4gfuNBxLPc3BeMkLGaPbF5vWtANQuJBHa28DsCLY6LkxP
+* aeon: WmsqiMAQtMHCLs1XzCm7bL6aAALG7GBaGW2CfPF6X9L7hoNZQK3dMsvTMFooCncshGCG2JC6nhFeAcmR1197MKGU2Dojden7k
+
+## Credits
+Official xmrig repo: https://github.com/xmrig/xmrig
+Guide that helped me in compiling gcc on Raspberry Pi: https://solarianprogrammer.com/2017/12/07/raspberry-pi-raspbian-compiling-gcc/
+
+## Performance notes/known issues
+* Max hashrate stat seems to get stuck shortly after starting - no actual impact
+* I _definitely_ see better performance (~10%) when the display goes blank. Not sure why, since I seem to get the same behavior whether i boot to desktop or CLI (happens with 6.1.0 gcc too- not specific to this build. Just an rPi oddity i've noticed).

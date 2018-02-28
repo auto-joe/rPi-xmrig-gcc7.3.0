@@ -15,6 +15,10 @@ I now see an approximate 20% hashrate increase with my new xmrig binary! I teste
 
 ![hashrate gcc-7.3.0](https://i.imgur.com/84csjI4.png)
 
+## Usage
+
+Usage is the same as xmrig 2.4.5: https://github.com/xmrig/xmrig/tree/v2.4.5#usage
+
 ## Warning
 
 I DO NOT RECOMMEND that anyone ever download binaries/executables from third party sources or unofficial Github repos. You can review my credits section to see my sources, and really just take me at my word from there. Hopefully some brave users will try it out and report back here to vouch for me :)

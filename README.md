@@ -1,12 +1,12 @@
 # rPi-xmrig-gcc7.3.0
 ## The fastest miner available for Raspbian on Raspberry Pi.
-*Updated to 2.5.1 for PoW changes*
+*Updated to 2.5.0 for PoW changes* - Includes some 2.5.1 changes (up to commit 2de5d92d3a06c513648ef17ba43d4d8bcfa12779)
 
-This miner is a compilation of https://github.com/xmrig/xmrig version 2.5.1, compiled with gcc/g++ 7.3.0 specifically for Raspbian Jessie on Raspberry Pi3 b (untested on earlier models - but please feel free to try and post your findings). As noted in the Ubuntu build instructions on the official xmrig repo: "Optionally you can use gcc 7 to small performance increase" (https://github.com/xmrig/xmrig/wiki/Ubuntu-Build). Additionally, a recent change _might_ take further advantage of 7.3.0 over 7.1.0, seen discussed here: https://github.com/xmrig/xmrig/pull/385. **TL;DR - use this binary for a 15%-20% performance boost on Raspbian.**
+This miner is a compilation of https://github.com/xmrig/xmrig version 2.5.0, compiled with gcc/g++ 7.3.0 specifically for Raspbian Jessie on Raspberry Pi3 b (untested on earlier models - but please feel free to try and post your findings). As noted in the Ubuntu build instructions on the official xmrig repo: "Optionally you can use gcc 7 to small performance increase" (https://github.com/xmrig/xmrig/wiki/Ubuntu-Build). Additionally, a recent change _might_ take further advantage of 7.3.0 over 7.1.0, seen discussed here: https://github.com/xmrig/xmrig/pull/385. **TL;DR - use this binary for a 15%-20% performance boost on Raspbian.**
 
 ## So what?
 
-The latest version of gcc/g++ available from Raspbian repositories is 6.1.0, and you will be hard-pressed to find a third party binary for 7+ at the moment. To solve this, I compiled 7.3.0 from source, directly on one of my rPi3's (long process- saving you time here!). Then, after making a slight tweak to the flags.cmake file from the original xmrig repo, I was able to successfully compile xmrig 2.5.1 with gcc-7.3.0:
+The latest version of gcc/g++ available from Raspbian repositories is 6.1.0, and you will be hard-pressed to find a third party binary for 7+ at the moment. To solve this, I compiled 7.3.0 from source, directly on one of my rPi3's (long process- saving you time here!). Then, after making a slight tweak to the flags.cmake file from the original xmrig repo, I was able to successfully compile xmrig 2.5.0 with gcc-7.3.0:
 
 ![init gcc-7.3.0](https://i.imgur.com/CV3gvNU.png)
 
@@ -18,7 +18,7 @@ I now see an approximate 20% hashrate increase with my new xmrig binary! I teste
 
 ## Usage
 
-Usage is the same as xmrig 2.5.1: https://github.com/xmrig/xmrig/tree/v2.5.1#usage
+Usage is the same as xmrig 2.5.0: https://github.com/xmrig/xmrig/tree/v2.5.0#usage
 
 ## Warning
 
@@ -26,9 +26,11 @@ I DO NOT RECOMMEND that anyone ever download binaries/executables from third par
 
 ## Donations
 
-I have not altered, or reduced the default xmrig donations in my compilations, as I respect the work that the developers have put in, I'm merely standing (crouching?) on their shoulders. However, if you feel like giving me a small donation for my time spent and sharing this binary and my findings, please feel free to donate to either of my wallets:
+I have not altered, or reduced the default xmrig donations in my compilations, as I respect the work that the developers have put in, I'm merely standing (crouching?) on their shoulders. However, if you feel like giving me a small donation for my time spent and sharing this binary and my findings, please feel free to donate to one of my wallets:
 * xmr: 4BrL51JCc9NGQ71kWhnYoDRffsDZy7m1HUU7MRU4nUMXAHNFBEJhkTZV9HdaL4gfuNBxLPc3BeMkLGaPbF5vWtANQuJBHa28DsCLY6LkxP
 * aeon: WmsqiMAQtMHCLs1XzCm7bL6aAALG7GBaGW2CfPF6X9L7hoNZQK3dMsvTMFooCncshGCG2JC6nhFeAcmR1197MKGU2Dojden7k
+* sumo: Sumoo3Puf8bAUMqCtmhfeVD48rypZDPCsCVgEe3mGp5FXQC8vcV3n2wV53hKNYbknHSfCeEC82K2JBFQkPCo3qEMMHpB17MeRux
+* trtl: TRTLv3STqeVN3WGh6Je1ikLTsUxejmvqiKo3FaigDQSkSMeGfnY2U8SX92eH7KixU3Mdss59wS2NXXwV7TLstURPWPi6C99aWfT
 
 ## Credits
 * Official xmrig repo: https://github.com/xmrig/xmrig

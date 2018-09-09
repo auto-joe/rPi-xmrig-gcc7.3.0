@@ -2,7 +2,7 @@
 ## The fastest miner available for Raspbian on Raspberry Pi.
 *Updated to 2.6.0-beta1 for Aeon, XMR, TRTL and Sumo PoW changes* - cryptonight-heavy support
 
-This miner is a compilation of https://github.com/xmrig/xmrig version 2.6.0-beta1, compiled with gcc/g++ 7.3.0 specifically for Raspbian Jessie on Raspberry Pi3 b (untested on earlier models - but please feel free to try and post your findings). As noted in the Ubuntu build instructions on the official xmrig repo: "Optionally you can use gcc 7 to small performance increase" (https://github.com/xmrig/xmrig/wiki/Ubuntu-Build). Additionally, a recent change _might_ take further advantage of 7.3.0 over 7.1.0, seen discussed here: https://github.com/xmrig/xmrig/pull/385. **TL;DR - use this binary for a 15%-20% performance boost on Raspbian.**
+This miner is a compilation of https://github.com/xmrig/xmrig version 2.6.0-beta1, compiled with gcc/g++ 7.3.0 specifically for Raspbian Stretch on Raspberry Pi3 b (untested on earlier models - but please feel free to try and post your findings). As noted in the Ubuntu build instructions on the official xmrig repo: "Optionally you can use gcc 7 to small performance increase" (https://github.com/xmrig/xmrig/wiki/Ubuntu-Build). Additionally, a recent change _might_ take further advantage of 7.3.0 over 7.1.0, seen discussed here: https://github.com/xmrig/xmrig/pull/385. **TL;DR - use this binary for a 15%-20% performance boost on Raspbian.**
 
 ## So what?
 

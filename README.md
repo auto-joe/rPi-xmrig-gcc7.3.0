@@ -1,12 +1,12 @@
 # rPi-xmrig-gcc7.3.0
 ## The fastest miner available for Raspbian on Raspberry Pi.
-*Updated to 2.6.0-beta1 for Aeon, XMR, TRTL and Sumo PoW changes* - cryptonight-heavy support
+*Updated to 2.6.4 for Aeon, XMR, TRTL and Sumo PoW changes* - cryptonight-heavy support
 
-This miner is a compilation of https://github.com/xmrig/xmrig version 2.6.0-beta1, compiled with gcc/g++ 7.3.0 specifically for Raspbian Stretch on Raspberry Pi3 b (untested on earlier models - but please feel free to try and post your findings). As noted in the Ubuntu build instructions on the official xmrig repo: "Optionally you can use gcc 7 to small performance increase" (https://github.com/xmrig/xmrig/wiki/Ubuntu-Build). Additionally, a recent change _might_ take further advantage of 7.3.0 over 7.1.0, seen discussed here: https://github.com/xmrig/xmrig/pull/385. **TL;DR - use this binary for a 15%-20% performance boost on Raspbian.**
+This miner is a compilation of https://github.com/xmrig/xmrig version 2.6.4, compiled with gcc/g++ 7.3.0 specifically for Raspbian Stretch on Raspberry Pi3 b (untested on earlier models - but please feel free to try and post your findings). As noted in the Ubuntu build instructions on the official xmrig repo: "Optionally you can use gcc 7 to small performance increase" (https://github.com/xmrig/xmrig/wiki/Ubuntu-Build). Additionally, a recent change _might_ take further advantage of 7.3.0 over 7.1.0, seen discussed here: https://github.com/xmrig/xmrig/pull/385. **TL;DR - use this binary for a 15%-20% performance boost on Raspbian.**
 
 ## So what?
 
-The latest version of gcc/g++ available from Raspbian repositories is 6.1.0, and you will be hard-pressed to find a third party binary for 7+ at the moment. To solve this, I compiled 7.3.0 from source, directly on one of my rPi3's (long process- saving you time here!). Then, after making a slight tweak to the flags.cmake file from the original xmrig repo, I was able to successfully compile xmrig 2.6.0-beta1 with gcc-7.3.0:
+The latest version of gcc/g++ available from Raspbian repositories is 6.1.0, and you will be hard-pressed to find a third party binary for 7+ at the moment. To solve this, I compiled 7.3.0 from source, directly on one of my rPi3's (long process- saving you time here!). Then, after making a slight tweak to the flags.cmake file from the original xmrig repo, I was able to successfully compile xmrig 2.6.4 with gcc-7.3.0:
 
 ![init gcc-7.3.0](https://i.imgur.com/CV3gvNU.png)
 
@@ -18,7 +18,7 @@ I now see an approximate 20% hashrate increase with my new xmrig binary! I teste
 
 ## Usage
 
-Usage is the same as xmrig-v2.6.0-beta1: https://github.com/xmrig/xmrig/tree/v2.6.0-beta1#usage
+Usage is the same as xmrig-v2.6.4: https://github.com/xmrig/xmrig/tree/v2.6.4#usage
 
 ## Warning
 
